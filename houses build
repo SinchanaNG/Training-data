@@ -1,0 +1,10 @@
+def max_steal(val):
+    incl = excl = 0
+    for v in val:
+        new_excl = max(incl, excl)
+        incl = excl + v
+        excl = new_excl
+    return max(incl, excl)
+
+val = [6, 7, 1, 3, 8, 2, 5]
+print(max_steal(val))

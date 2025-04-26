@@ -1,0 +1,14 @@
+def is_disarium(num): return num == sum(int(d)**i for i, d in enumerate(str(num), 1))
+
+def first_n_disarium(n):
+    res, num = [], 0
+    while len(res) < n:
+        if is_ disarium(num): res.append(num)
+        num += 1
+    return res
+
+def disarium_in_range(start, end): return [x for x in range(start, end+1) if is_disarium(x)]
+
+
+print("First 10 Disarium numbers:", first_n_disarium(10))
+print("Disarium numbers between 100 and 200:", disarium_in_range(100, 200))
